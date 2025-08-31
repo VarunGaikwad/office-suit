@@ -651,14 +651,14 @@ export default function Translate(): JSX.Element {
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <button
+                    {/* <button
                       onClick={() => copyToClipboard(translation.target)}
                       className="p-1 rounded hover:bg-gray-200"
                       title="Copy translation"
                       type="button"
                     >
                       <Copy className="w-4 h-4 text-gray-500" />
-                    </button>
+                    </button> */}
                     <button
                       onClick={() => handleRecentTranslation(translation)}
                       className="text-blue-600 hover:text-blue-700 text-sm font-medium"
