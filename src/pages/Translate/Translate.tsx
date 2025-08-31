@@ -55,7 +55,9 @@ const translateWithGemini = async (
       : `Translate the following text from ${fromLangName} to ${toLangName}. Only return the translation, nothing else:\n\n${text}`;
 
   const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${
+      apiKey || import.meta.env.VITE_GEMINI_KEY
+    }`,
     {
       method: "POST",
       headers: {
